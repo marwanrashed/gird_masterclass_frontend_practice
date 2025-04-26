@@ -1,0 +1,201 @@
+/* Responsive Web Design (RWD)
+Media Query 
+
+*/
+/* Desktop First => max-width*/
+/* Mobile First => min-width */
+
+@media screen and (min-width: 640px) {
+
+    .sm-100 {
+        width: 100% !important;
+    }
+
+    .sm-80 {
+        width: 80% !important;
+    }
+
+    .sm-70 {
+        width: 70% !important;
+    }
+    
+    .sm-60 {
+        width: 60% !important;
+    }
+
+    .sm-50 {
+        width: 50% !important;
+    }
+
+    .sm-33 {
+        width: 33.3% !important;
+    }
+
+    .sm-25 {
+        width: 25% !important;
+    }
+    .sm-20 {
+        width: 20% !important;
+    }
+
+    .sm-16 {
+        width: 16.66% !important;
+    }
+    .sm-10 {
+        width: 10% !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .md-100 {
+        width: 100% !important;
+    }
+
+    .md-80 {
+        width: 80% !important;
+    }
+
+    .md-70 {
+        width: 70% !important;
+    }
+    
+    .md-60 {
+        width: 60% !important;
+    }
+
+    .md-50 {
+        width: 50% !important;
+    }
+
+    .md-33 {
+        width: 33.3% !important;
+    }
+
+    .md-25 {
+        width: 25% !important;
+    }
+    .md-20 {
+        width: 20% !important;
+    }
+
+    .md-16 {
+        width: 16.66% !important;
+    }
+    .md-10 {
+        width: 10% !important;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .lg-100 {
+        width: 100% !important;
+    }
+
+    .lg-80 {
+        width: 80% !important;
+    }
+
+    .lg-70 {
+        width: 70% !important;
+    }
+
+    .lg-60 {
+        width: 60% !important;
+    }
+
+    .lg-50 {
+        width: 50% !important;
+    }
+
+    .lg-33 {
+        width: 33.3% !important;
+    }
+
+    .lg-25 {
+        width: 25% !important;
+    }
+    .lg-20 {
+        width: 20% !important;
+    }
+
+    .lg-16 {
+        width: 16.66% !important;
+    }
+    .lg-10 {
+        width: 10% !important;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1536px) {
+    .xl-100 {
+        width: 100% !important;
+    }
+
+    .xl-80 {
+        width: 80% !important;
+    }
+
+    .xl-70 {    
+        width: 70% !important;
+    }
+
+    .xl-60 {    
+        width: 60% !important;
+    }
+
+    .xl-50 {
+        width: 50% !important;
+    }
+
+    .xl-33 {
+        width: 33.3% !important;
+    }
+
+    .xl-25 {
+        width: 25% !important;
+    }
+    .xl-20 {
+        width: 20% !important;
+    }
+
+    .xl-16 {
+        width: 16.66% !important;
+    }
+    .xl-10 {
+        width: 10% !important;
+    }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 1024px) {
+
+
+}
+
+@media screen and (max-width: 1536px) {
+
+
+}
+
+
+@media screen and (max-width: 1024px) {
+ 
+
+}
