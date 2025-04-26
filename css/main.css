@@ -11,7 +11,7 @@
 :root {
     font-size: 14px;
     font-family: "Open-sans", Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: var(--color-white);
     color: #333;
     /* default color for headers*/
     line-height: calc(26/14 * 1rem);
@@ -44,7 +44,7 @@
 
     /* titles */
     --titles-font-family: "Montserrat", sans-serif;
-   /* common between mini and big titles*/
+    /* common between mini and big titles*/
     --titles-font-size: calc(12/14 * 1rem);
     --titles-line-height: calc(20/14 * 1rem);
     /* common between mini and big titles*/
@@ -73,7 +73,12 @@
     --font-weight-bold: 700;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--headers-font-family);
     font-weight: var(--font-weight-bold);
     margin-bottom: calc(10/14 * 1rem);
@@ -107,17 +112,150 @@ a {
     text-decoration: none;
 }
 
-.mini-title, .title {
+.mini-title,
+.title {
     font-family: var(--titles-font-family);
     font-weight: var(--titles-font-weight);
     letter-spacing: var(--titles-letter-spacing);
     line-height: var(--titles-line-height);
+    text-transform: uppercase;
 }
 
 .mini-title {
     font-size: var(--mini-title-font-size);
+    color: var(--color-white);
+    --padding-top-bottom: calc(5/14 * 1rem);
+    --padding-left-right: calc(10/14 * 1rem);
+    padding: var(--padding-top-bottom) var(--padding-left-right);
+    --mini-title-bg-color: var(--color-bg-mini-title-green);
+    background-color: var(--mini-title-bg-color);
+
 }
 
 .title {
     font-size: var(--titles-font-size);
+    color: var(--text-title-grey-color);
+}
+
+.btn {
+    background-color: var(--color-bg-orange);
+    padding: calc(10/14 * 1rem) calc(20/14 * 1rem);
+    border-radius: 2rem;
+    border: 0;
+    cursor: pointer;
+    font-size: var(--link-font-size);
+    letter-spacing: var(--link-letter-spacing);
+}
+
+.iphone, .tv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.tech ~ div :not(.iphone, .tv) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* grid */
+
+.tech {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1.2fr 0.8fr;
+    grid-auto-columns: 1fr;
+    gap: 0% 0%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "iphone iphone header header"
+        "keyboard imac download icloud"
+        "controller ipad ipad icloud"
+        "twitter popular tv tv";
+}
+
+/* grid items */
+
+/* iphone section */
+.iphone {
+    grid-area: iphone;
+    display: flex;
+    background-color: var(--color-white);
+
+}
+
+.iphone img {
+    width: 100%;
+    object-fit: cover;
+}
+.iphone .iphone-img {
+    align-self: flex-end;
+    margin-top: calc(50/14 * 1rem);
+    width: 30%;
+}
+
+.iphone .content-col {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: calc(20/14 * 1rem);
+}
+
+.iphone .content-col h3 {
+    padding-right: calc(40/14 * 1rem);
+    font-weight: var(--font-weight-regular);
+}
+
+
+.header {
+    grid-area: header;
+    background-color: var(--color-bg-light-grey);
+}
+
+.keyboard {
+    grid-area: keyboard;
+    background-color: var(--color-bg-orange);
+}
+
+.imac {
+    grid-area: imac;
+}
+
+.download {
+    grid-area: download;
+}
+
+.icloud {
+    grid-area: icloud;
+    background-color: var(--color-bg-purple);
+}
+
+.tv {
+    grid-area: tv;
+    background-color: var(--color-bg-dark);
+}
+
+.popular {
+    grid-area: popular;
+}
+
+.twitter {
+    grid-area: twitter;
+    background-color: var(--color-bg-light-blue);
+}
+
+.controller {
+    grid-area: controller;
+    background-color: var(--color-bg-light-grey);
+}
+
+.ipad {
+    grid-area: ipad;
+    background-color: var(--color-bg-grey-blue);
 }
