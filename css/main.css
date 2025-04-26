@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 
@@ -155,11 +156,14 @@ a {
 }
 
 
-.tech ~ div :not(.iphone, .tv) {
+.tech>div:not(.iphone):not(.tv) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    --gap: calc(20/14 * 1rem);
+    gap: var(--gap);
 }
 /* grid */
 
@@ -182,19 +186,27 @@ a {
 /* iphone section */
 .iphone {
     grid-area: iphone;
-    display: flex;
     background-color: var(--color-white);
+    padding: 0 4%;
+    --gap: calc(20/14 * 1rem);
+    gap: var(--gap);
 
 }
 
 .iphone img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
     object-fit: cover;
+    flex-basis: auto;
 }
 .iphone .iphone-img {
     align-self: flex-end;
-    margin-top: calc(50/14 * 1rem);
-    width: 30%;
+    --margin-top: calc(50/14 * 1rem);
+    margin-top: var(--margin-top);
+    /* width: calc((100% - var(--margin-top))/3); */
+    flex: 0 0 30%;
+    filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 1));
 }
 
 .iphone .content-col {
@@ -207,15 +219,24 @@ a {
     gap: calc(20/14 * 1rem);
 }
 
-.iphone .content-col h3 {
-    padding-right: calc(40/14 * 1rem);
+.iphone .content-col h3,
+.iphone .content-col p {
     font-weight: var(--font-weight-regular);
+    width: 88%;
 }
 
 
 .header {
     grid-area: header;
     background-color: var(--color-bg-light-grey);
+}
+
+.header h1 {
+    width:60%;
+    padding: 0 calc(50/14 * 1rem);
+}
+.header a {
+    text-decoration: underline;
 }
 
 .keyboard {
