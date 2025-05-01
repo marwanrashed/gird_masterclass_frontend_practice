@@ -175,17 +175,16 @@ a {
 /* grid */
 
 .tech {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1.2fr 0.8fr;
-    grid-auto-columns: 1fr;
-    gap: 0% 0%;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "iphone iphone header header"
-        "keyboard imac download icloud"
-        "controller ipad ipad icloud"
-        "twitter popular tv tv";
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1.2fr 1.1fr 1.2fr 0.6fr; 
+    gap: 0% 0%; 
+    grid-template-areas: 
+      "iphone iphone header header"
+      "keyboard imac download icloud"
+      "controller ipad ipad icloud"
+      "twitter popular tv tv"; 
 }
 
 /* grid items */
@@ -398,17 +397,80 @@ a {
 .tv {
     grid-area: tv;
     background-color: var(--color-bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --gap: 3rem;
+    gap: var(--gap);
+    overflow: hidden;
 }
+
+.tv-image {
+    width: calc(calc(100% - var(--gap)) /3);
+}
+
+.tv-text {
+    width: calc(calc(100% - var(--gap)) /2);
+}
+.tv-text h3 {
+    color: var(--color-white);
+    font-size: var(--h3-medium-font-size);
+    font-weight: var(--font-weight-regular);
+    padding-right: 40%;
+}
+.tv-image img {
+    width: 100%;
+}
+
+
 
 /* popular section */
 .popular {
     grid-area: popular;
 }
 
+.popular .mini-title {
+    border-radius: 0.5rem;
+    padding: 0 0.9rem;
+}
+
+.popular .mini-title ~h3 {
+    font-weight: var(--font-weight-regular);
+}
+
 /* twitter section */
 .twitter {
     grid-area: twitter;
     background-color: var(--color-bg-light-blue);
+
+}
+
+.twitter .circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    --circle-radius: 16rem;
+    width: var(--circle-radius);
+    height: var(--circle-radius);
+    border-radius: 50%;
+    background-color: #35CFED;
+
+
+}
+.twitter .circle > div{
+    width: 18%;
+}
+
+.twitter .circle > h3{
+    width: 70%;
+    color: var(--color-white);
+    font-weight: var(--font-weight-regular);
+}
+
+
+.twitter img {
+    width: 100%;
 }
 
 /* controller section */
