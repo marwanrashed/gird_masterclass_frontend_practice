@@ -178,7 +178,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1.2fr 0.8fr;
-    /* grid-auto-columns: 1fr; */
+    grid-auto-columns: 1fr;
     gap: 0% 0%;
     grid-auto-flow: row;
     grid-template-areas:
@@ -335,6 +335,62 @@ a {
 .icloud {
     grid-area: icloud;
     background-color: var(--color-bg-purple);
+}
+
+.icloud .circle {
+    background-color: #8166B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 373px;
+    height: 373px;
+    border-radius: 50%;
+}
+
+.icloud .circle > div {
+    width: 30%;
+}
+
+.icloud .circle .floppy-image {
+    width:65%;
+    margin-top: calc(20/14 * 1rem);
+}
+.icloud .circle .mini-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 27%;
+    background-color: var(--color-bg-purple);
+    border-radius: 1rem;
+}
+
+.icloud .circle .mini-title img {
+    width: 1rem;
+}
+
+.circle img {
+    width: 100%;
+}
+
+.circle .title,
+.circle ~ h2,
+.circle ~ p   {
+    color: var(--color-white);
+}
+
+.circle ~ p {
+    width: 80%;
+}
+
+.circle ~ a {
+    color: var(--color-bg-dark);
+    font-weight: var(--font-weight-bold);
+    background-color: var(--color-bg-link-yellow);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+
 }
 
 /* tv section */
