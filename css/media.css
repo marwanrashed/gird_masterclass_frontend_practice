@@ -176,7 +176,24 @@ Media Query
 
 
 @media screen and (max-width: 640px) {
-
+    .tech {
+        --grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr !important;
+        --grid-columns: 1fr !important;
+        --grid-template:
+        "header"
+        "iphone"
+        "keyboard"
+        "controller"
+        "imac"
+        "download"
+        "twitter"
+        "ipad"
+        "icloud"
+        "icloud"
+        "popular"
+        "tv" !important; 
+ 
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -186,6 +203,20 @@ Media Query
 
 @media screen and (max-width: 1024px) {
 
+    .tech {
+
+          --grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.6fr 1fr !important;
+          --grid-columns: 1fr 1fr !important;
+          --grid-template:
+          "header header"
+          "iphone iphone"
+          "keyboard controller"
+          "imac download"
+          "twitter icloud"
+          "ipad icloud"
+          "popular popular"
+          "tv tv" !important; 
+    }
 
 }
 

@@ -116,6 +116,7 @@ a {
     text-decoration: none;
 }
 
+
 .mini-title,
 .title {
     font-family: var(--titles-font-family);
@@ -176,15 +177,18 @@ a {
 
 .tech {
     display: grid; 
+    --grid-rows: 1.2fr 1.1fr 1.2fr 0.6fr;
+    --grid-columns: 1fr 1fr 1fr 1fr;
+    --grid-template:
+    "iphone iphone header header"
+    "keyboard imac download icloud"
+    "controller ipad ipad icloud"
+    "twitter popular tv tv";
     grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1.2fr 1.1fr 1.2fr 0.6fr; 
+    grid-template-columns: var(--grid-columns); 
+    grid-template-rows: var(--grid-rows); 
     gap: 0% 0%; 
-    grid-template-areas: 
-      "iphone iphone header header"
-      "keyboard imac download icloud"
-      "controller ipad ipad icloud"
-      "twitter popular tv tv"; 
+    grid-template-areas:var(--grid-template); 
 }
 
 /* grid items */
@@ -504,7 +508,7 @@ a {
     background-size: 75%;
     background-repeat: no-repeat;
     background-position: bottom;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     overflow: hidden;
 }
 
