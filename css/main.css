@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 
@@ -23,6 +22,9 @@
     --link-letter-spacing: 0.1rem;
 
     /* colors */
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-bg-light-grey) var(--color-bg-dark);
 
     --color-white: #fff;
     --color-bg-dark: #2C2C2C;
@@ -104,6 +106,7 @@ h3 {
 
 p {
     color: var(--text-title-grey-color);
+    font-size: calc(16/14 * 1rem);
 }
 
 a {
@@ -148,7 +151,8 @@ a {
     letter-spacing: var(--link-letter-spacing);
 }
 
-.iphone, .tv {
+.iphone,
+.tv {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -156,22 +160,25 @@ a {
 }
 
 
-.tech>div:not(.iphone):not(.tv) {
+.tech>div:not(.iphone):not(.tv):not(.imac) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    --align-items: center;
+    align-items: var(--align-items);
+    --text-align: center;
+    text-align: var(--text-align);
     --gap: calc(20/14 * 1rem);
     gap: var(--gap);
 }
+
 /* grid */
 
 .tech {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1.2fr 0.8fr;
-    grid-auto-columns: 1fr;
+    /* grid-auto-columns: 1fr; */
     gap: 0% 0%;
     grid-auto-flow: row;
     grid-template-areas:
@@ -200,12 +207,13 @@ a {
     object-fit: cover;
     flex-basis: auto;
 }
+
 .iphone .iphone-img {
     align-self: flex-end;
     --margin-top: calc(50/14 * 1rem);
     margin-top: var(--margin-top);
-    /* width: calc((100% - var(--margin-top))/3); */
-    flex: 0 0 30%;
+    width: calc((100% - var(--margin-top))/3);
+    /* flex: 0 0 30%; */
     filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 1));
 }
 
@@ -225,57 +233,135 @@ a {
     width: 88%;
 }
 
-
+/* header section */
 .header {
     grid-area: header;
     background-color: var(--color-bg-light-grey);
 }
 
 .header h1 {
-    width:60%;
+    width: 60%;
     padding: 0 calc(50/14 * 1rem);
 }
+
 .header a {
     text-decoration: underline;
 }
 
+/* keyboard section */
 .keyboard {
     grid-area: keyboard;
     background-color: var(--color-bg-orange);
 }
 
-.imac {
-    grid-area: imac;
+.keyboard img {
+    max-width: 100%;
+    object-fit: cover;
+    flex-basis: auto;
 }
 
+.keyboard .keyboard-image {
+    width: 70%;
+
+}
+
+.keyboard h3 {
+    width: 50%;
+    color: var(--color-white);
+}
+
+.keyboard a {
+    color: var(--text-link-yellow-color);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Imac section */
+
+.tech .imac {
+    grid-area: imac;
+    --text-align: left !important; 
+    --gap: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    padding-top: calc(68/14 * 1rem);
+    overflow: hidden;
+}
+
+
+.imac .title {
+    text-align: left;
+}
+
+.imac h3 {
+    width: 40%;
+    margin-bottom: auto;
+    font-weight: var(--font-weight-regular);
+}
+
+.imac img {
+    width: 100%;
+}
+
+.imac .imac-image {
+    position: relative;
+    left: -30%;
+    bottom: -2%;
+    width: 100%;
+    /* max-width: none; */
+    margin-top: 20px;
+
+
+}
+
+/* download section */
 .download {
     grid-area: download;
+    padding-top: calc(68/14 * 1rem);
+    --text-align: left !important;
+    justify-content: flex-start !important;
 }
 
+.download p {
+    padding-right: 9rem;
+}
+.download a {
+    font-weight: var(--font-weight-bold);
+    align-self: flex-start;
+}
+
+/* icloud section */
 .icloud {
     grid-area: icloud;
     background-color: var(--color-bg-purple);
 }
+
+/* tv section */
 
 .tv {
     grid-area: tv;
     background-color: var(--color-bg-dark);
 }
 
+/* popular section */
 .popular {
     grid-area: popular;
 }
 
+/* twitter section */
 .twitter {
     grid-area: twitter;
     background-color: var(--color-bg-light-blue);
 }
 
+/* controller section */
 .controller {
     grid-area: controller;
     background-color: var(--color-bg-light-grey);
 }
 
+/* ipad section */
 .ipad {
     grid-area: ipad;
     background-color: var(--color-bg-grey-blue);
