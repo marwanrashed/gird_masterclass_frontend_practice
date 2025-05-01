@@ -429,7 +429,8 @@ a {
     grid-area: popular;
 }
 
-.popular .mini-title {
+.popular .mini-title,
+.ipad .mini-title {
     border-radius: 0.5rem;
     padding: 0 0.9rem;
 }
@@ -478,9 +479,57 @@ a {
     grid-area: controller;
     background-color: var(--color-bg-light-grey);
 }
+.controller-image{
+    width: 50%;
+    position: relative;
+    left: -6%;
+}
 
+.controller h3 {
+    font-weight: var(--font-weight-regular);
+}
+
+.controller a {
+    font-weight: var(--font-weight-bold);
+}
+
+.controller img {
+    width: 100%;
+}
 /* ipad section */
 .ipad {
     grid-area: ipad;
     background-color: var(--color-bg-grey-blue);
+    background-image: url("../images/UX.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.ipad > h3 {
+    color: var(--color-white);
+    width: 30%;
+}
+.ipad .ipad-image {
+    position: relative;
+    left: -11%;
+    margin-top: auto;
+    bottom: -2%;
+    width: 80%;
+}
+
+.ipad .mini-title {
+    background-color: var(--color-bg-light-orange);
+    align-self: flex-start;
+    --maring-mini-title: 1rem;
+    margin-top: var(--maring-mini-title);
+    margin-left: var(--maring-mini-title);
+
+}
+
+
+.ipad img {
+    width: 100%;
 }
